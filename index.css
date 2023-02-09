@@ -11,10 +11,10 @@ body {
 	font-size: 1.4rem;
 	height: 100%;
 	line-height: 1.6;
-	margin: 0;
+	margin: 0 96px;
 }
   
- * {
+* {
 	box-sizing: border-box;
 }
 
@@ -24,13 +24,10 @@ body {
 	display: flex;
 	height: 20vh;
 	justify-content: center;
-    margin: 0 96px;
 }
 
 .content {
 	height: 60vh;
-	margin: 0 auto;
-	max-width: 600px;
 	padding: 56px;
 }
 
@@ -43,3 +40,7 @@ body {
 	font-weight: 700;
 }
 
+.undefined {
+    color: #FFFF00;
+    margin-top: 48px;
+}

@@ -1,3 +1,4 @@
+import chalk from 'chalk'
 import fs from 'fs/promises'
 import {formatDistanceToNow, isAfter, isBefore, parse, format, isToday, set} from 'date-fns'
 import {Command} from 'commander';
@@ -21,6 +22,7 @@ const currentDate = set(new Date(), {hours: 0, minutes: 0, seconds: 0, milliseco
 const currentDateAndTime = format(new Date(), 'yyyy-MM-dd HH:mm');
 
 let datesCompared = '';
+let definedDate = '';
 
 function compareDates() {
     if (isAfter(dateSentAsArgument, currentDate)) {
@@ -29,13 +31,21 @@ function compareDates() {
     } else if (isBefore(dateSentAsArgument, currentDate)) {
         datesCompared = 'before'
         console.log(`The Entered date: "${dateStringSentAsArgument}" is before today's date`)
-    } else {
+    } else if (isToday(dateSentAsArgument, currentDate)){
         datesCompared = 'currently'
         console.log(`The Entered date: "${dateStringSentAsArgument}" is today`)
+    } else {
+        console.log((chalk.bgYellow)`You can also try to enter a date after "npm run start" or "node index.js" like so: "npm run start yyyy-mm-dd"`);
     }
 }
 
 compareDates();
+
+if (dateStringSentAsArgument === undefined) {
+    definedDate = `<span class="undefined">Try to enter a date after "npm run start" or "node index.js" like so: "npm run start yyyy-mm-dd"</span>`;
+} else {
+    definedDate =  `The entered date <span class="results">${dateStringSentAsArgument}</span> is <span class="results">${datesCompared}</span> today's date!`;
+}
 
 const fileContent = `
 Name: ${first} ${last}
@@ -61,7 +71,7 @@ const htmlFile = `
     	</header>
     	<main class="content">
 			<div class="content-item">
-				Npm & Node version: <span class="results">${npmAndNode}</span>
+				npm & node version: <span class="results">${npmAndNode}</span>
 			</div>
 			<div class="content-item">
 			Git version: <span class="results">${gitVersion}</span>
@@ -73,7 +83,7 @@ const htmlFile = `
 				Today's date and time: <span class="results">${currentDateAndTime}</span>
 			</div>
 			<div class="content-item">
-				The entered date <span class="results">${dateStringSentAsArgument}</span> is <span class="results">${datesCompared}</span> today's date!
+                ${definedDate}
 			</div>
     	</main>	
     </body>
@@ -93,7 +103,7 @@ body {
 	font-size: 1.4rem;
 	height: 100%;
 	line-height: 1.6;
-	margin: 0;
+	margin: 0 96px;
 }
   
 * {
@@ -106,13 +116,10 @@ body {
 	display: flex;
 	height: 20vh;
 	justify-content: center;
-    margin: 0 96px;
 }
 
 .content {
 	height: 60vh;
-	margin: 0 auto;
-	max-width: 600px;
 	padding: 56px;
 }
 
@@ -123,6 +130,10 @@ body {
 
 .results {
 	font-weight: 700;
+}
+
+.undefined {
+    color: #FFFF00;
 }
 `;
 
