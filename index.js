@@ -129,6 +129,7 @@ body {
 }
 
 .results {
+    color: #ADD8E6;
 	font-weight: 700;
 }
 
