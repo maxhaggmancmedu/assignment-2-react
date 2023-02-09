@@ -97,7 +97,7 @@ html {
   }
   
 body {
-	background-color: #000000;      
+    background-color: #000000;      
     color: #fff;
     font-family: sans-serif;
     font-size: 1.4rem;
@@ -107,7 +107,7 @@ body {
 }
   
 * {
-	box-sizing: border-box;
+    box-sizing: border-box;
 }
 
 .header {
