@@ -48,12 +48,12 @@ if (dateStringSentAsArgument === undefined) {
 }
 
 const fileContent = `
-Name: ${first} ${last} <br>
-npm & node: ${npmAndNode} <br>
-Git version: ${gitVersion} <br>
-Days since start of course: ${daysSinceStartOfCourse} <br>
-Today's date and time: ${currentDateAndTime} <br>
-Entered date is ${dateStringSentAsArgument} and it is ${datesCompared} today's date!
+- Name: ${first} ${last} <br>
+- npm & node: ${npmAndNode} <br>
+- Git version: ${gitVersion} <br>
+- Days since start of course: ${daysSinceStartOfCourse} <br>
+- Today's date and time: ${currentDateAndTime} <br>
+- Entered date is ${dateStringSentAsArgument} and it is ${datesCompared} today's date!
 `;
 
 const htmlFile = `
