@@ -20,8 +20,6 @@ const dateSentAsArgument = parse(dateStringSentAsArgument, 'yyyy-MM-dd', new Dat
 const currentDate = set(new Date(), {hours: 0, minutes: 0, seconds: 0, milliseconds: 0})
 const currentDateAndTime = format(new Date(), 'yyyy-MM-dd HH:mm');
 
-
-
 let datesCompared = '';
 
 function compareDates() {
