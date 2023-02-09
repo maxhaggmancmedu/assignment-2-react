@@ -7,6 +7,10 @@ const gitVersion = await getGitVersion();
 const first = 'Max';
 const last = 'Häggman';
 
+const argumentParser = new Command();
+argumentParser.option('--date')
+argumentParser.parse();
+
 // process.env.npm_config_user_agent only works when using `npm run start` not `node index.js`
 const npmAndNode = process.env.npm_config_user_agent;
 const startOfCourse = new Date(2023, 0, 31)
@@ -16,9 +20,7 @@ const dateSentAsArgument = parse(dateStringSentAsArgument, 'yyyy-MM-dd', new Dat
 const currentDate = set(new Date(), {hours: 0, minutes: 0, seconds: 0, milliseconds: 0})
 const currentDateAndTime = format(new Date(), 'yyyy-MM-dd HH:mm');
 
-const argumentParser = new Command();
-argumentParser.option('--date')
-argumentParser.parse();
+
 
 let datesCompared = '';
 
