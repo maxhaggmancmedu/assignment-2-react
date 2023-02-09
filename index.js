@@ -60,50 +60,50 @@ const htmlFile = `
 <!DOCTYPE html>
 <html lang="en">
 	<head>
-		<meta charset="UTF-8" />
-		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-		<link rel="stylesheet" href="index.css" />
+	    <meta charset="UTF-8" />
+	    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	    <link rel="stylesheet" href="index.css" />
     	<title>Assignment 2</title>
 	</head>
-	<body>
-		<header class="header">
-			<h1>Assignment 2</h1>
-    	</header>
-    	<main class="content">
-			<div class="content-item">
-				npm & node version: <span class="results">${npmAndNode}</span>
-			</div>
-			<div class="content-item">
-			Git version: <span class="results">${gitVersion}</span>
-			</div>
-			<div class="content-item">
-				Days since start of course: <span class="results">${daysSinceStartOfCourse}</span>
-			</div>
-			<div class="content-item">
-				Today's date and time: <span class="results">${currentDateAndTime}</span>
-			</div>
-			<div class="content-item">
+    <body>
+        <header class="header">
+            <h1>Assignment 2</h1>
+        </header>
+        <main class="content">
+            <div class="content-item">
+                npm & node version: <span class="results">${npmAndNode}</span>
+            </div>
+            <div class="content-item">
+            Git version: <span class="results">${gitVersion}</span>
+            </div>
+            <div class="content-item">
+                Days since start of course: <span class="results">${daysSinceStartOfCourse}</span>
+            </div>
+            <div class="content-item">
+                Today's date and time: <span class="results">${currentDateAndTime}</span>
+            </div>
+            <div class="content-item">
                 ${definedDate}
-			</div>
-    	</main>	
+            </div>
+        </main>	
     </body>
 </html>
 `;
 
 const cssFile = `
 html {
-	font-size: 10px;
-	height: 100vh;
+    font-size: 10px;
+    height: 100vh;
   }
   
 body {
-	background-color: #000000;
+	background-color: #000000;      
     color: #fff;
-	font-family: sans-serif;
-	font-size: 1.4rem;
-	height: 100%;
-	line-height: 1.6;
-	margin: 0 96px;
+    font-family: sans-serif;
+    font-size: 1.4rem;
+    height: 100%;
+    line-height: 1.6;
+    margin: 0 96px;
 }
   
 * {
@@ -111,26 +111,26 @@ body {
 }
 
 .header {
-	align-items: center;
+    align-items: center;
     border-bottom: 3px solid #fff;
-	display: flex;
-	height: 20vh;
-	justify-content: center;
+    display: flex;
+    height: 20vh;
+    justify-content: center;
 }
 
 .content {
-	height: 60vh;
-	padding: 56px;
+    height: 60vh;
+    padding: 56px;
 }
 
 .content-item {
-	font-size: 20px;
-	margin-bottom: 12px;
+    font-size: 20px;
+    margin-bottom: 12px;
 }
 
 .results {
     color: #ADD8E6;
-	font-weight: 700;
+    font-weight: 700;
 }
 
 .undefined {
