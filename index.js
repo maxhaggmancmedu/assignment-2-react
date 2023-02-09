@@ -38,9 +38,9 @@ function compareDates() {
 compareDates();
 
 const fileContent = `
-name: ${first} ${last}
+Name: ${first} ${last}
 npm & node: ${npmAndNode}
-git version: ${gitVersion}
+Git version: ${gitVersion}
 Days since start of course: ${daysSinceStartOfCourse}
 Today's date and time: ${currentDateAndTime}
 Entered date is ${dateStringSentAsArgument} and it is ${datesCompared} today's date!
@@ -75,9 +75,8 @@ const htmlFile = `
 			<div class="content-item">
 				The entered date <span class="results">${dateStringSentAsArgument}</span> is <span class="results">${datesCompared}</span> today's date!
 			</div>
-    	</main>
-		
-</body>
+    	</main>	
+    </body>
 </html>
 `;
 
@@ -97,7 +96,7 @@ body {
 	margin: 0;
 }
   
- * {
+* {
 	box-sizing: border-box;
 }
 
@@ -125,7 +124,6 @@ body {
 .results {
 	font-weight: 700;
 }
-
 `;
 
 await fs.writeFile('index.md', fileContent);
