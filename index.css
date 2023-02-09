@@ -1,0 +1,45 @@
+
+html {
+	font-size: 10px;
+	height: 100vh;
+  }
+  
+body {
+	background-color: #000000;
+    color: #fff;
+	font-family: sans-serif;
+	font-size: 1.4rem;
+	height: 100%;
+	line-height: 1.6;
+	margin: 0;
+}
+  
+ * {
+	box-sizing: border-box;
+}
+
+.header {
+	align-items: center;
+    border-bottom: 3px solid #fff;
+	display: flex;
+	height: 20vh;
+	justify-content: center;
+    margin: 0 96px;
+}
+
+.content {
+	height: 60vh;
+	margin: 0 auto;
+	max-width: 600px;
+	padding: 56px;
+}
+
+.content-item {
+	font-size: 20px;
+	margin-bottom: 12px;
+}
+
+.results {
+	font-weight: 700;
+}
+
