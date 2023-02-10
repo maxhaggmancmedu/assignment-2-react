@@ -35,14 +35,14 @@ function compareDates() {
         datesCompared = 'currently'
         console.log(`The Entered date: "${dateStringSentAsArgument}" is today`)
     } else {
-        console.log((chalk.bgYellow)`You can also try to enter a date after "npm run start" or "node index.js" like so: "npm run start yyyy-mm-dd"`);
+        console.log((chalk.bgYellow)`You can also try to enter a date after "npm run start" or "node index.js" like so: "npm run start --date yyyy-mm-dd"`);
     }
 }
 
 compareDates();
 
 if (dateStringSentAsArgument === undefined) {
-    definedDate = `<span class="undefined">Try to enter a date after "npm run start" or "node index.js" like so: "npm run start yyyy-mm-dd"</span>`;
+    definedDate = `<span class="undefined">Try to enter a date after "npm run start" or "node index.js" like so: "npm run start --date yyyy-mm-dd"</span>`;
 } else {
     definedDate =  `The entered date <span class="results">${dateStringSentAsArgument}</span> is <span class="results">${datesCompared}</span> today's date!`;
 }
